@@ -5,7 +5,7 @@ Example:
 ```swift
 import Alamofire
 
-Alamofire.request(Router.GetAccessToken(email, password)).validate().responseJSON { (response: Response<AnyObject, NSError>) in
+Alamofire.request(Router.GetAccessToken(email, password)).responseJSON { (response: Response<AnyObject, NSError>) in
 
   // do something
 
