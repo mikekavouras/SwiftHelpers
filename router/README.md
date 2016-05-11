@@ -36,3 +36,18 @@ func fetchFeed(completion: (ResultType<[Post]>) -> Void) {
 	
 )
 ```
+
+Handling the response
+
+```swift
+fetchFeed { (response: ResultType<[Post]>) in
+	switch response {
+		case .Success(let posts):
+			self.posts = posts
+			self.tableView.reloadData()
+		case .Error(let message):
+			print("Error: \(message)")
+	}
+}
+
+```
